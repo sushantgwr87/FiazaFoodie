@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Source+Sans+Pro:wght@300&display=swap');
+
+:root {
+    --lightbase: #ece6e6;
+    --text: rgb(243, 241, 241);
+    --darkbase: rgb(24, 24, 24);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body,html {
+    height: 100%;
+}
+
+/* h1 font family for all headings*/
+h1 {
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+/* h3 font family for all sub heading and body */
+h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* background parallax base */
+.parallax-image {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    overflow: hidden;
+}
+/* first and last image parallax */
+.parallax {
+    background-image: url("./image/blue_platter.jpg");
+    filter: brightness(85%);
+    height: 100vh;
+    z-index: 0;
+}
+
+/* heading/title page */
+.heading {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    opacity: 0.8;
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    top: 30%;
+    left: 25%;
+    color: var(--text);
+    z-index: 1;
+}
+.heading .head {
+    font-size: 76px;
+    border-bottom: 5px solid var(--text);
+    padding: 1rem 0.2rem 0 0.2rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+.heading .sub_head {
+    font-size: 30px;
+    padding: 1rem 0.2rem;
+    letter-spacing: 2px;
+}
+
+/* scroll text styling */
+ul {
+    list-style-type: none;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: calc(20px + 3vw);
+    letter-spacing: 3px;
+    color: var(--text);
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    top: 80%;
+}
+
+/* about page using flex */
+.about {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--lightbase);
+}
+.column {
+    padding: 5vw 40px;
+}
+.column.image {
+    perspective: 300px;
+    padding-left: 10vw;
+    margin-left: 50px;
+    flex: 30%;
+}
+.column img {
+    border-radius: 5px;
+    width: 100%;
+    height: 28vw;
+    transition: 0.35s linear;
+}
+.column img:hover {
+    transform: rotateY(5deg) rotateZ(-3deg) scaleX(0.9);
+    box-shadow: 5px 15px 30px 10px rgb(110, 110, 110);
+}
+.column.content {
+    padding-right: 120px;
+    flex: 50%;
+    overflow: hidden;
+}
+.column.content h1 {
+    letter-spacing: 3px;
+    font-size: 3vw;
+    font-weight: 100;
+}
+.column.content h3 {
+    padding: 2vw 0;
+    font-size: 1.7vw;
+    line-height: 2.7vw;
+    letter-spacing: 2px;
+}
+
+/* parallax middle */
+.parallaxMid {
+    background-image: url("./image/roll.jpg");
+    filter: brightness(100%);
+    /* height: 60%; */
+    height: 60vh;
+    z-index: 0;
+}
+
+/* common parallax text effect apllied to all images with text */
+.parallaxText {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    line-height: 60vh;
+    opacity: 0.7;
+    color: var(--text);
+    z-index: 1;
+}
+.parallaxText h1 {
+    font-size: 9vw;
+    font-weight: 100;
+    letter-spacing: 4px;
+}
+
+/* collaborations section styling */
+.collab {
+    background-color: var(--lightbase);
+}
+.options {
+    display: flex;
+    justify-content: center;
+}
+.options img {
+    border-radius: 2px;
+    width: 20vw;
+    height: 20vw;
+}
+.collab .type {
+    padding: 5vw;
+}
+.collab .options p {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 1.8vw;
+    letter-spacing: 3px;
+    padding-bottom: 3vw;
+}
+.desk {
+    padding: 3vw 13vw 0px 13vw;
+    text-align: center;
+}
+.desk h1 {
+    font-size: 4vw;
+    letter-spacing: 4px;
+    font-weight: 100;
+    padding: 2vw 0px;
+}
+.collab .desk h3 {
+    font-size: 1.5vw;
+    letter-spacing: 3px;
+    padding-bottom: 1vw;
+}
+
+/* parallax middle low */
+.parallaxMidlow {
+    background-image: url("./image/Bbq.jpg");
+    filter: brightness(100%);
+    /* height: 60%; */
+    height: 60vh;
+    z-index: 0;
+}
+
+/* features section */
+.features {
+    background-color: var(--darkbase);
+    color: var(--text);
+}
+.features .quote {
+    width: 5vw;
+}
+.features .quote>img {
+    width: 100%;
+    height: 8vw;
+}
+.features .options {
+    padding: 0 11vw 10px 10vw;
+}
+.features .options h1 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding-bottom: 10px;
+}
+.features .options p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.3vw;
+    letter-spacing: 2px;
+}
+.features .type {
+    padding: 0 30px 4vw 0px;
+}
+.features .desk {
+    padding: 3vw 0 0 10vw;
+    text-align: unset;
+}
+
+/* end parallax */
+.parallaxEnd {
+    background-image: url("./image/plate_black.jpg");
+    filter: brightness(100%);
+    /* height: 60%; */
+    height: 60vh;
+    z-index: 0;
+}
+
+/* footer */
+footer {
+    background-color: var(--darkbase);
+    color: var(--text);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5vw 5vw 4vw 5vw;
+}
+footer h1 {
+    font-weight: 100;
+    font-size: 2.5vw;
+    letter-spacing: 3px;
+    line-height: 4vw;
+}
+footer .copyright h3 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 1.8vw;
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+footer p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.3vw;
+    letter-spacing: 2px;
+    padding-top: 1vw;
+}
+footer .copyright {
+    width: 100%;
+    flex: 100%;
+    padding-top: 5vw;
+    text-align: right;
+}
+footer .col {
+    padding: 0 10px;
+    flex: 20%;
+}
+footer .conclusion {
+    line-height: 2.2vw;
+}
+
+/* footer logo styling */
+footer img {
+    width: calc(20px + 3vw);
+}
+footer span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* footer links, a tag design */
+footer .contact {
+    text-align: right;
+    width: 100%;
+}
+footer a {
+    text-decoration: none;
+    color: var(--text);
+    border: 2px solid var(--text);
+    border-radius: 10px;
+    margin-left: 3vw;
+    /* padding: 25px 15px 15px 15px; */
+    padding: 2vw 1vw 1vw 1vw;
+}
+footer a:hover {
+    border-color: rgb(228, 139, 5);
+    color: rgb(228, 139, 5);
+}
+footer a i {
+    /* font-size: 2.5vw; */
+    font-size: calc(12px + 1.5vw);
+}
+
+@media only screen and (max-width: 587.8px) {
+    footer .out-link.linkedin {
+        margin-top: 4vw;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .heading .head {
+        font-size: 7vw;
+    }
+    .heading .sub_head {
+        font-size: 3vw;
+    }
+    .collab .options p {
+        font-size: 1.3vw;
+    }
+    .collab .desk h3 {
+        font-size: 1.5vw;
+    }
+    .features .options {
+        flex-direction: column;
+    }
+    .features .options h1 {
+        font-size: 3vw;
+    }
+    .features .options p {
+        font-size: 2.5vw;
+    }
+    .features .type {
+        padding: 0 0px 4vw 0px;
+    }
+    footer h1 {
+        font-size: 2.8vw;
+    }
+    footer p {
+        font-size: 1.5vw;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .column {
+        padding: 5vw 3vw;
+    }
+    .column.image {
+        perspective: 300px;
+        padding-left: 10vw;
+        margin-left: 10px;
+        flex: 30%;
+    }
+    .column img {
+        border-radius: 5px;
+        width: 100%;
+        height: 28vw;
+        transition: 0.35s linear;
+    }
+    .column img:hover {
+        transform: rotateY(5deg) rotateZ(-3deg) scaleX(0.9);
+        box-shadow: 5px 15px 30px 10px rgb(110, 110, 110);
+    }
+    .column.content {
+        padding-right: 10vw;
+        flex: 50%;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .collab {
+        padding: 1vw 0 5vw 0;
+    }
+    .collab .options {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .collab .options img {
+        border-radius: 2px;
+        width: 30vw;
+        height: 30vw;
+    }
+    .collab .type {
+        padding: 4vw;
+    }
+    .collab .options p {
+        font-family: 'Hammersmith One', sans-serif;
+        font-size: calc(8px + 1vw);
+        letter-spacing: 3px;
+        padding-bottom: 3vw;
+    }
+    .collab .desk {
+        padding: 5vw 5vw 0 5vw;
+    }
+    .collab .desk h1 {
+        font-size: calc(10px + 2.5vw);
+        letter-spacing: 2px;
+        padding: 2vw 0px;
+    }
+    .collab .desk h3 {
+        font-size: calc(5px + 1vw);
+        letter-spacing: 2px;
+        padding-bottom: 1.5vw;
+    }
+    footer .col.contact {
+        padding: 8vw 0 4vw 0;
+        flex: 100%;
+        text-align: center;
+    }
+    footer .out-link.linkedin {
+        margin-top: 0;
+    }
+    footer h1 {
+        font-size: calc(8px + 1vw);
+    }
+    footer p {
+        font-size: calc(5px + 0.5vw);
+    }
+    footer .conclusion {
+        line-height: 3.2vw;
+    }
+    footer .copyright { 
+        padding: 2vw 0;
+        text-align: center;
+    }
+    footer .copyright h3 {
+        font-size: 2.8vw;
+    }
+    footer img {
+        width: calc(20px + 4.5vw);
+    }
+    footer a {
+        padding: 2.8vw 1.5vw 1.5vw 1.5vw;
+    }
+    footer a i {
+        font-size: calc(12px + 2.5vw);
+    }
+}
