@@ -1,6 +1,6 @@
-<p align="center">
-    <a href="https://app.netlify.com/sites/fiazafoodie/deploys"><img src="https://api.netlify.com/api/v1/badges/460076a2-056e-44cb-bda2-bbd38e6c707e/deploy-status" alt="Netlify Status" height="30"></a>
-</p>
+<!-- <p align="center">
+    <a href="https://app.netlify.com/sites/fiazafoodie/deploys"><img src="https://api.netlify.com/api/v1/badges/460076a2-056e-44cb-bda2-bbd38e6c707e/deploy-status" alt="Netlify-Status" height="30"></a>
+</p> -->
 
 <p align="center">
     <img src="https://img.shields.io/badge/-Parallax Effect-18359E?style=flat" alt="Parallax Effect" height="30">
